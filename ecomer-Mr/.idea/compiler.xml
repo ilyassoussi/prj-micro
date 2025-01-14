@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="invontery-config" />
+        <module name="order-config" />
+        <module name="server-config" />
+        <module name="gateway-service" />
+        <module name="customer-config" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloudServer" target="17" />
+      <module name="demo" target="17" />
+      <module name="demo.main" target="17" />
+      <module name="demo.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloudServer" options="-parameters" />
+      <module name="customer-config" options="-parameters" />
+      <module name="gateway-service" options="-parameters" />
+      <module name="invontery-config" options="-parameters" />
+      <module name="order-config" options="-parameters" />
+      <module name="server-config" options="-parameters" />
+    </option>
+  </component>
+</project>
