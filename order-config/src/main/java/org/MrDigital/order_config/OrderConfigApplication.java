@@ -1,9 +1,11 @@
 package org.MrDigital.order_config;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.Bean;
 
 
 @SpringBootApplication
@@ -15,7 +17,8 @@ public class OrderConfigApplication {
 		SpringApplication.run(OrderConfigApplication.class, args);
 	}
 
-
+	@Bean
+	public ModelMapper modelMapper(){return new ModelMapper();}
 //	@Bean
 //	CommandLineRunner start(OrderDAO orderDAO){
 //		return args -> {

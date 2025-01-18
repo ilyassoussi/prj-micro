@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 public interface IOrder {
-    ResponseEntity<?> CreateOrder(Long productID);
+    ResponseEntity<?> CreateOrder(Long productID , OrderDTO orderDTO);
     List<Order> AllOrder();
     ResponseEntity<?> deleteOrder(Long id);
 }

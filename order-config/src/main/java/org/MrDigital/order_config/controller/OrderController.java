@@ -1,6 +1,7 @@
 package org.MrDigital.order_config.controller;
 
 import org.MrDigital.order_config.dao.OrderDAO;
+import org.MrDigital.order_config.dto.OrderDTO;
 import org.MrDigital.order_config.model.Order;
 import org.MrDigital.order_config.service.OrderService;
 import org.springframework.http.ResponseEntity;
@@ -23,8 +24,8 @@ public class OrderController {
     }
 
     @PostMapping("/{id}")
-    public ResponseEntity<?> Create(@PathVariable long id){
-        return orderService.CreateOrder(id);
+    public ResponseEntity<?> Create(@PathVariable long id, @RequestBody OrderDTO orderDTO){
+        return orderService.CreateOrder(id,orderDTO);
     }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable long id){
